@@ -1,0 +1,78 @@
+﻿/* Reset some default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: red;
+    overflow: hidden;
+}
+
+/* Background Video Styles */
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire background */
+    z-index: 0;
+    filter: contrast(140%) brightness(90%) saturate(200%) hue-rotate(200deg)
+}
+
+/* Centered Text Styles */
+.center_text {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Haettenschweiler;
+    font-style:italic;
+    font-size: 8vw;
+    color: lawngreen;
+    text-align: center;
+    z-index: 1; /* Ensure the text is above the video */
+}
+
+/* Navbar Styles */
+.navbar {
+
+    position: fixed;
+    font-size: 7vw;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    background-color: transparent; /* Semi-transparent black background */
+    z-index: 1;
+}
+
+    .navbar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .navbar li {
+        display: inline-block;
+        color: lawngreen;
+        margin-right: 40px;
+    }
+
+    .navbar a {
+        text-decoration: none;
+        font-weight: bold;
+        color: lawngreen;
+    }
+
+.audio-player {
+    z-index: 1;
+    position: relative;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+    #playPauseButton {
+        background: transparent;
+        border: none;
+        color: lawngreen;
+        font-size: 2em !important;
+    }
