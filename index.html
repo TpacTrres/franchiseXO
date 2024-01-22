@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -9,18 +9,46 @@
 </head>
 <body>
 
-    <video id="background-video" autoplay muted loop> <source src="somegif.mp4" type="video/mp4"> Your Browser does not Answer the Video </video>
+    <div id="container">
+        <img id="GIF_MC" src="GIF_MIC_3.png" alt="where is the image?">
+
+        <video id="background-video" autoplay muted loop> <source src="somegif.mp4" type="video/mp4"> Your Browser does not Answer the Video </video>
+    </div>
+
+
+
+    <script>
+        // JavaScript to update the img src attribute
+        var GIFimage = document.getElementById("GIF_MC");
+        // Switch between GIF_MIC_1.png and GIF_MIC_14.png
+        var isLinePath1 = 1;
+
+        function switchPath() {
+            GIFimage.setAttribute("src", "GIF_MIC_" + isLinePath1 + ".png");
+            isLinePath1 = (isLinePath1 % 14) + 1;
+        }
+        // Call the switchPath function after a delay (for demonstration)
+        setInterval(switchPath, 62.5); // Switch every 1.2 seconds
+    </script>
+
+
+
+
 
     <div class="center_text">
         <h1>FranchiseXO </h1>
     </div>
     <nav class="navbar">
         <ul>
-            <li><a href="https://www.youtube.com/playlist?list=PLYePgyNw4kofZmIrOLKPmw-E-_8GThXCd">Y T</a></li>
+            <li><a href="https://www.youtube.com/">Y T</a></li>
             <li><a href="https://soundcloud.com/user-269152908">S C</a></li>
             <li><a href="https://www.instagram.com/">I G</a></li>
         </ul>
     </nav>
+
+
+
+
 
     <script>
         // Allow scrolling with mouse wheel or touchpad
@@ -29,12 +57,33 @@
         });
     </script>
 
+
+
+
+
     <div class="audio-player">
         <button id="playPauseButton">▶</button>
     </div>
 
     <audio id="audioPlayer" src="ref_try_harder.wav" loop></audio>
 
+
+
+
+
+
+
+
+
+
+
+
+
     <script src="Franchise_audioPlayer.js"></script>
+    <script src="Franchise_GraphicEffects.js"></script>
+    <!--remove"&"sign to activate, replace local script -->
+    <script src="&Franchise_CoreJs.js"></script>
+
+
 </body>
 </html>
