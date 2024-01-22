@@ -1,9 +1,26 @@
-﻿/* Reset some default styles */
+/* Reset some default styles */
 body, html {
     margin: 0;
     padding: 0;
     background-color: red;
     overflow: hidden;
+}
+
+
+#container {
+    width: 100vw;
+    height: auto;
+}
+
+#GIF_MC {
+    transform: rotate(180deg) scaleX(-1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index:0;
+    opacity: 1;
 }
 
 /* Background Video Styles */
@@ -14,6 +31,7 @@ body, html {
     width: 100%;
     height: auto;
     min-height: 100%;
+    opacity: 0.4;
     object-fit: cover; /* Ensures the video covers the entire background */
     z-index: 0;
     filter: contrast(140%) brightness(90%) saturate(200%) hue-rotate(200deg)
@@ -26,11 +44,14 @@ body, html {
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: Haettenschweiler;
-    font-style:italic;
+    font-style: italic;
     font-size: 8vw;
-    color: lawngreen;
+    color: #40fd14;
     text-align: center;
-    z-index: 1; /* Ensure the text is above the video */
+    z-index: 1; /* Ensure the text is above the video */   
+}
+.center_text.HoverShine{
+    text-shadow: 0px 0px 59px rgba(255,0,0,0.9);
 }
 
 /* Navbar Styles */
@@ -60,8 +81,20 @@ body, html {
     .navbar a {
         text-decoration: none;
         font-weight: bold;
-        color: lawngreen;
+        color: #40fd14;
+        transition: color 2s ease;
     }
+    .navbar a.color2 {
+        color:#ccff00;
+    }
+    .navbar a.color3{
+        color: springgreen;
+    }
+    .navbar a:hover {
+        transition: none;
+        color: red;
+    }
+    .navbar a:hover{ text-shadow: 0px 0px 10px rgba(255,0,0,0.9)}
 
 .audio-player {
     z-index: 1;
@@ -73,6 +106,6 @@ body, html {
     #playPauseButton {
         background: transparent;
         border: none;
-        color: lawngreen;
+        color: #40fd14;
         font-size: 2em !important;
     }
