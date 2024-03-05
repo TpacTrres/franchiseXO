@@ -8,8 +8,9 @@ body, html {
 
 
 #container {
-    width: 100vw;
-    height: auto;
+    min-height: 100vh;
+    width: auto;
+    overflow: hidden;
 }
 
 #GIF_MC {
@@ -17,9 +18,10 @@ body, html {
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
+    min-height: 100%;
     z-index:0;
     opacity: 1;
+    overflow:hidden;
 }
 
 /* Background Video Styles */
@@ -27,11 +29,12 @@ body, html {
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
+    min-height: 100vh;
     opacity: 0.4;
     object-fit: cover; /* Ensures the video covers the entire background */
     z-index: 0;
-    filter: contrast(140%) brightness(90%) saturate(200%) hue-rotate(200deg)
+    filter: contrast(140%) brightness(90%) saturate(200%) hue-rotate(200deg);
+    overflow:hidden;
 }
 
 /* Centered Text Styles */
@@ -106,3 +109,6 @@ body, html {
         color: #40fd14;
         font-size: 2em !important;
     }
+
+
+media quer
